@@ -14,6 +14,10 @@
 #include <fal_cfg.h>
 #include "fal_def.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * FAL (Flash Abstraction Layer) initialization.
  * It will initialize all flash device and all flash partition.
@@ -147,5 +151,9 @@ struct rt_device *fal_mtd_nor_device_create(const char *parition_name);
  *            NULL: created failed
  */
 struct rt_device *fal_char_device_create(const char *parition_name);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* _FAL_H_ */
